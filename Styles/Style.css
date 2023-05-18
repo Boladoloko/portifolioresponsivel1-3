@@ -1,0 +1,157 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap'); 
+
+ :root{ 
+    --cor-primaria:black;
+    --cor-secundaria: white;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'montserrat', sans-serif;
+ }
+* { 
+ margin: 0; 
+ padding: 0;
+}
+.cabecalho{
+    padding: 2% 0 0 20%;
+}
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+    font-style: none;
+}
+.cabecalho__botton {
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem; /* A unidade de medida anterior era o Pixel(px), porem o pixel é uma unidade de medida absoluta, ou seja não responsiva ela nao se adapta a tela do dispositivo,
+     Entao foi mudada para o Ems(rem), que é uma unidade de medida responsiva, ou seja ela se adapta a tela do dispositivo(16px equivalem a 1rem entao para tem a medida correta de pixels
+     convertidos em rem, dividir a quantidade de "px" por 16...)*/
+    font-weight: 600;
+    text-decoration: none;
+}
+body {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    box-sizing: border-box;
+}
+.apresentacao {
+    padding: 4.7% 20%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    gap: 82px;/* esse na tag pai garante que todos elementos dentro tenham o espaçamento com resposividade*/
+}
+h1{
+    font-weight: bold;
+}
+.destaque-h1 {
+    color: var(--cor-terciaria);
+}
+.destaque-p{
+    color: var(--cor-terciaria);
+}
+.destaque-span { 
+    color:var(--cor-terciaria);
+}
+.apresentacao__text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+    width: 50%; /* A unidade de medida anterior era o Pixel(px), porem o pixel é uma unidade de medida absoluta, ou seja não responsiva ela nao se adapta a tela do dispositivo,
+    Entao foi mudada para o "%", que é uma unidade de medida responsiva, ou seja ela se adapta a tela do dispositivo (ela é relativa a tag pai do conteudo)*/ 
+}
+.apresentacao__text__title {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.apresentacao__text__paragrafo{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+.apresentacao__text__subtitle{
+    font-family: var(--fonte-primaria);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.apresentacao__links{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.apresentacao__links__bottons{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    color: var(--cor-secundaria);
+    border: 2px solid var(--cor-terciaria); 
+    border-radius: 8px;
+    text-align: center;
+    width: 65%;
+    padding: 21.5px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--fonte-secundaria);  
+    text-decoration: none; 
+}
+.apresentacao__links__bottons:hover{
+    background-color: var(--cor-hover);
+    width: 70%;
+}
+
+.apresentacao__imagem{
+    width: 46%;
+}
+.rodape {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    text-align: center;
+    padding: 24px;
+    font-family:var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+/*------------------------------------------------------------------------------------ABOUT ME-----------------------------------------------------------------------------------------------*/
+.aboutme__main{
+padding: 4.7% 20%; 
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 96px;
+}
+.aboutme__main__title{
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-secundaria);
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+.aboutme__main__text{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+/*----------------------------------------------------------------------------Responsividade Mobile----------------------------------------------------------------------------------------*/
+@media (max-width: 1200px){/* O @media é uma estrutura base utilizada para criar media queries. Ela permite definir diferentes estilos para dispositivos com tamanhos de tela específicos, 
+    como "mobile". Existem vários outros tipos de media queries disponíveis. Para mais informações, consulte a documentação. O uso de parênteses () dentro da media query serve como uma condição,
+     onde tudo dentro deles é verificado se é verdadeiro. Por exemplo, se a largura da tela for menor que o valor definido em "max-width", os estilos contidos dentro das chaves {} serão aplicados.*/
+.cabecalho{
+    padding: 10%;
+}
+.cabecalho__menu{
+    justify-content: center;
+}
+.apresentacao {
+    flex-direction:column-reverse;
+    padding: 5%;
+}
+.apresentacao__text{
+    width: auto;/*o valor "auto" aqui irá fazer o conteudo dentro da "section" utlizar todo espaço disponivel, nao havendo imcompatibilidade com o valor inserido na msm class de tamanho de tela
+    diferente, há outra forma de fazer a msm função do valor "auto" que é colocar "100%" na largura da página responsiva, ela vai ter o mesmo resultado que o "auto"; e vai acompanhar o tamanho
+     da tela de forma automática.*/
+}
+
+}
