@@ -19,7 +19,7 @@
 .cabecalho__menu{
     display: flex;
     gap: 80px;
-    font-style: none;
+    font-style: normal;
 }
 .cabecalho__botton {
     color: var(--cor-terciaria);
